@@ -30,3 +30,15 @@ I also used concise arrow function syntax with an implicit return. Since both fu
 For example, calculatePrice can now be written as const calculatePrice = (price, quantity) => price * quantity;.
 
 I think the concise syntax makes these simple calculation functions easier to read because there is less code. However, for more complicated functions, using curly braces and an explicit return could make the code easier to understand.
+
+------------------------------------------
+
+Phase 4: Callbacks & Higher-Order Functions
+
+In this phase, I created the applyDiscount function and used callbacks to handle different types of discounts. applyDiscount is considered a higher-order function because it accepts another function as a parameter.
+
+The studentDiscount and seniorDiscount functions are callback functions. I passed them into applyDiscount, which then calls the appropriate callback using the total amount.
+
+The student discount reduces the total by 10%, while the senior discount reduces it by 20%. This allows the same applyDiscount function to work with different discount calculations without having to rewrite the function.
+
+If I wanted to apply no discount, I could create a noDiscount function that simply returns the original total. For example, it could return total without changing it.
