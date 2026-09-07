@@ -18,3 +18,15 @@ In this phase, I created the calculateStoreTax function. It takes an amount as a
 When I tried to use console.log(defaultTaxRate) outside of the function, I received a ReferenceError. This happened because defaultTaxRate is a local variable. Local variables can only be accessed within the function where they are declared.
 
 This helped me understand that variables have different scopes depending on where they are created. I commented out the line after confirming the error so the program can continue running normally.
+
+------------------------------------------
+
+Phase 3: Refactoring to Arrow Functions
+
+In this phase, I changed the calculatePrice and getTax functions into arrow functions. Arrow functions use the => symbol instead of the traditional function syntax.
+
+I also used concise arrow function syntax with an implicit return. Since both functions only need to perform one calculation and return the result, I did not need curly braces or the return keyword.
+
+For example, calculatePrice can now be written as const calculatePrice = (price, quantity) => price * quantity;.
+
+I think the concise syntax makes these simple calculation functions easier to read because there is less code. However, for more complicated functions, using curly braces and an explicit return could make the code easier to understand.
