@@ -1,10 +1,6 @@
-function calculatePrice(price, quantity) {
-    return price * quantity;
-}
+const calculatePrice = (price, quantity) => price * quantity;
 
-const getTax = function(amount, taxRate) {
-    return amount * taxRate;
-};
+const getTax = (amount, taxRate) => amount * taxRate;
 
 const subtotal = calculatePrice(15, 4);
 const tax = getTax(subtotal, 0.07);
