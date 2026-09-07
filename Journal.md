@@ -42,3 +42,15 @@ The studentDiscount and seniorDiscount functions are callback functions. I passe
 The student discount reduces the total by 10%, while the senior discount reduces it by 20%. This allows the same applyDiscount function to work with different discount calculations without having to rewrite the function.
 
 If I wanted to apply no discount, I could create a noDiscount function that simply returns the original total. For example, it could return total without changing it.
+
+-------------------------------------------
+
+Phase 5: Composing the Master Order Function
+
+In this phase, I created the `calculateFinalBill` function to combine all of the helper functions from the previous phases. The function first uses `calculatePrice` to calculate the subtotal. It then passes the subtotal to `applyDiscount` along with the discount callback. After the discount is applied, `getTax` calculates the 7% tax on the discounted price. Finally, the discounted price and tax are added together to get the final bill.
+
+Breaking the process into smaller, single-purpose functions made `calculateFinalBill` easier to write and understand. Each helper function is responsible for one specific task, so I did not have to put all of the calculations into one long block of code.
+
+Using callbacks also makes the function more flexible because I can pass different discount functions into `calculateFinalBill`. For example, I can use `studentDiscount` or `seniorDiscount` without changing the code inside the master function.
+
+For the test case of a $20 item purchased three times with a student discount, the final bill was $57.78 after the discount and 7% tax were applied.
